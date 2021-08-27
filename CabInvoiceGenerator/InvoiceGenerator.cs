@@ -23,6 +23,14 @@ namespace CabInvoiceGenerator
                     this.COST_PER_MIN = 1;
                     this.MINIMUM_FARE = 5;
                 }
+
+                if (rideType.Equals(RideType.PREMIUM))
+                {
+                    this.rideType = rideType;
+                    this.COST_PER_KM = 15;
+                    this.COST_PER_MIN = 2;
+                    this.MINIMUM_FARE = 20;
+                }
             }
             catch (CabInvoiceException)
             {
